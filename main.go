@@ -34,7 +34,6 @@ func getFlags() (jsonPath, templatePath string) {
 
 // readJson reads the file at jsonPath
 // and returns a map[string]interface and an error
-// either return value can be nil
 func readJson(jsonPath string) (raw map[string]interface{}, err error) {
 	var data []byte
 	data, err = ioutil.ReadFile(jsonPath)
@@ -49,7 +48,6 @@ func readJson(jsonPath string) (raw map[string]interface{}, err error) {
 }
 
 // parseJson parses a byte slice to a map with string keys
-// can be nil
 func parseJson(data []byte) (result map[string]interface{}) {
 	var f interface{}
 	err := json.Unmarshal(data, &f)
