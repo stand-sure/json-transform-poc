@@ -1,0 +1,7 @@
+{
+    "alpha": "a1",
+    "beta": "b2",
+    "gamma": {
+        "delta": "d4"
+    }
+}

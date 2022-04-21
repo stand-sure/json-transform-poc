@@ -1,0 +1,8 @@
+{
+  "hello": "{{ if ne .alpha nil }}{{ .alpha | js }}{{ else }}John Doe{{ end }}"
+  {{ if ne .beta nil }}
+  "nested": {
+    "{{ .gamma.delta | js }}": "{{ .beta | js }}"
+  }
+  {{ end }}
+}
